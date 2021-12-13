@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Readex Pro', sans-serif;
+}
+
+*::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh !important;
+}
+
+h1 {
+    font-weight: 800;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    border-radius: 6px;
+    gap: 6px;
+}
+
+.board-cell {
+    background-color: white;
+    border-radius: 6px;
+    border: 1px solid rgb(209, 209, 209);
+    transition-duration: 0.15s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+.board-bg {
+    background-color: rgb(235, 235, 235);
+    border-radius: 10px;
+    width: 60%;
+    aspect-ratio: 1;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+}
+
+#preview {
+    z-index: 5;
+    transition: ease .4s;
+    user-select: none;
+    font-weight: 500;
+    color: var(--bs-gray-700);
+}
+
+#preview h1 {
+    font-weight: 400;
+    color: var(--bs-gray-700);
+}
+
+.board-cell h3 {
+    font-size: 1.2rem;
+    margin: 0;
+    font-weight: 100;
+    color: var(--bs-gray-500);
+    padding: 10px;
+    font-style: italic;
+    user-select: none;  
+    top: 0;
+    left: 0;
+    margin: 2px;
+    position: absolute;
+}
+
+.board-cell h1 {
+    color: var(--bs-gray-700);
+}
+
+.btn-move-preview {
+    background-color: #4756ff;
+    white-space: nowrap;
+    line-height: 18px;
+    padding: 10px;
+    color: white;
+    transition: transform .1s, background-color .1s;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.btn-move-preview:hover {
+    background-color: #5e6bfa;
+    color: white;
+}
+
+.btn-move-preview:active {
+    background-color: #5e6bfa;
+    color: white;
+    display: block;
+    transform: scale(0.95) translateY(5px);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+}
+
+.btn-move-preview:focus {
+    border: 2px solid var(--bs-gray-800);
+    color: white;
+    display: block;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+}
+
+.warning {
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.preview-text {
+    text-shadow: 0px 6px 10px rgba(0, 0, 0, 0.144);
+}
+
+.shake {
+    animation: shake 2.5s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+    transition: .4s;
+}
+
+/* animation to shake error message */
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    5% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    10% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    15% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    20% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    25% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    30% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    35% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    40% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    45% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+    55% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    60% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    65% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    70% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    75% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    80% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    85% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    90% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    95% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    100% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+
+}
+
+.move {
+    z-index: 2;
+}

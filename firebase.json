@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "ai-boards",
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

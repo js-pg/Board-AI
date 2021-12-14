@@ -9,6 +9,10 @@ const checkIfWon = () => {
         location: undefined
     };
 
+    // 123
+    // 456
+    // 789
+
     if (listOf.targets[0].innerHTML === listOf.targets[1].innerHTML && listOf.targets[0].innerHTML === listOf.targets[2].innerHTML) {
         check.won = true;
         check.player = listOf.targets[0].innerHTML.toLowerCase();

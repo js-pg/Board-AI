@@ -9,8 +9,19 @@
     box-sizing: border-box;
 }
 
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
 body {
     height: 100vh !important;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -228,4 +239,69 @@ h1 {
 
 .move {
     z-index: 2;
+}
+
+.options {
+    max-width: fit-content;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+.options svg {
+    font-size: 2.5rem;
+    color: var(--bs-gray-700);
+}
+
+.optionSvg {
+    cursor: pointer;
+    transition: .3s;
+    font-size: 12px;
+}
+
+#show {
+    z-index: 998;
+}
+
+#hide {
+    z-index: 1000;
+}
+
+.optionSvg:hover, .optionSvg:focus {
+    transform: rotate(360deg);
+}
+
+
+.options button {
+    transition-duration: .15s;
+}
+
+.options button:active{
+    transform: scale(0.89);
+}
+
+.modal-slide {
+    height: 100vh;
+    background-color: var(--bs-gray-400);
+    z-index: 999;
+    width: 40vw;
+    right: 0;
+    transition:  transform .7s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+}
+
+.modal-slide-active {
+    transform: translateX(70vw);
+
+}
+
+.block-active {
+    position: absolute;
+    top: 0;
+    left: 0;    
+    height: 100vh;
+    width: 100vw;
+    z-index: 30;
+
 }

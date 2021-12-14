@@ -40,10 +40,37 @@
 </head>
 
 <body>
+  <div class="block-active block"></div>
+  <div class="modal-slide position-absolute">
+    <div class="w-100 d-flex justify-content-center align-items-center options position-absolute p-3 pt-0">
+
+      <button onclick="changeSvg()">
+        <svg id="hide" tabindex="2" class="optionSvg" stroke="currentColor" fill="currentColor" stroke-width="0"
+          viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M563.8 512l262.5-312.9c4.4-5.2.7-13.1-6.1-13.1h-79.8c-4.7 0-9.2 2.1-12.3 5.7L511.6 449.8 295.1 191.7c-3-3.6-7.5-5.7-12.3-5.7H203c-6.8 0-10.5 7.9-6.1 13.1L459.4 512 196.9 824.9A7.95 7.95 0 0 0 203 838h79.8c4.7 0 9.2-2.1 12.3-5.7l216.5-258.1 216.5 258.1c3 3.6 7.5 5.7 12.3 5.7h79.8c6.8 0 10.5-7.9 6.1-13.1L563.8 512z">
+          </path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
   <div class="move position-absolute d-flex justify-content-center align-items-center flex-column" id="preview"
     onmouseover="enablePreview()">
     <h1 class="text-center w-100 preview-text-move" id="movePreviewText"></h1>
-    <button onclick="makeMove(selectedCell); console.log(checkIfWon())" type="button" class="btn m-0 p-2 btn-move-preview">Make Move</button>
+    <button onclick="makeMove(selectedCell); console.log(checkIfWon())" type="button"
+      class="btn m-0 p-2 btn-move-preview">Make Move</button>
+  </div>
+  <div style="z-index: 20;" class="w-100 d-flex justify-content-center align-items-center options position-absolute p-3 pt-0">
+    <button onclick="changeSvg()" style="z-index: 0;">
+      <svg id="show" tabindex="2" class="optionSvg" stroke="currentColor" fill="currentColor" stroke-width="0"
+        viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd"
+          d="M3 9.5a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm5 0a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm5 0a1.5 1.5 0 110-3 1.5 1.5 0 010 3z"
+          clip-rule="evenodd"></path>
+      </svg>
+    </button>
+
   </div>
 
 
@@ -105,14 +132,18 @@
             </div>
           </div>
         </div>
+
+
         <h3 id="errorMessage" class="text-danger mt-4 warning">&nbsp;</h3>
 
-
       </div>
+
+
 
     </div>
 
   </div>
+
 
 
   <script>

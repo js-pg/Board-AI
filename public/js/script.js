@@ -116,5 +116,12 @@ function makeMove(whichCell) {
     }
 }
 
+function changeSvg() {
 
 
+    document.querySelector('.modal-slide').classList.toggle('modal-slide-active');
+    document.querySelector('.block').classList.toggle('block-active');
+
+}
+
+changeSvg();

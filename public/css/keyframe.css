@@ -93,8 +93,9 @@
     }
 
 
+
     99% {
-        transform: translate(-150vw, 0px);
+        transform: translate(-150vw, -50vh) scale(0%);
         opacity: 0;
     }
 

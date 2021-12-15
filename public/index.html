@@ -61,7 +61,7 @@
   <div class="move position-absolute d-flex justify-content-center align-items-center flex-column" id="preview"
     onmouseover="enablePreview()">
     <h1 class="text-center w-100 preview-text-move" id="movePreviewText"></h1>
-    <button onclick="makeMove(selectedCell);" type="button"
+    <button onclick="makeMove(selectedCell); checkIfWon()" type="button"
       class="btn m-0 p-2 btn-move-preview">Make Move</button>
   </div>
   <div style="z-index: 20;" class="w-100 d-flex justify-content-center align-items-center options position-absolute p-3 pt-0">
@@ -196,6 +196,7 @@
     crossorigin="anonymous"></script>
   <script src="js/script.js"></script>
   <script src="js/game.js"></script>
+  <script src="js/keys.js"></script>
 
 </body>
 

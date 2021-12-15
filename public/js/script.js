@@ -145,3 +145,20 @@ const resetAndHide = () => {
         setModalContent('', false);
     }, 800);
 };
+
+// function to apply class slide-active to every listof.target
+const slideTargets = () => {
+    //wait 1 second before removing class
+    listOf.targets.forEach(target => {
+        target.classList.add('slide-active');
+    });
+    changeSvg();
+    setTimeout(() => {
+        listOf.targets.forEach(target => {
+            target.classList.remove('slide-active');
+            resetGame();
+            setModalContent('', false);
+
+        });
+    }, 500);
+};

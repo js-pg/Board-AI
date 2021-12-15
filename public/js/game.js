@@ -93,13 +93,13 @@ function promptWinner(player, points) {
 
     if (player === 'tie') {
         setModalContent(`
-    <div class="w-100 mt-3 d-flex flex-column justify-content-center align-items-center"><h1 class="alert--win w-100 text-center">Game Result:<br><span>Tie!</h1></span><button onclick="resetAndHide()" class="btn btn-move-preview">New Game</button></div>
+    <div class="w-100 mt-3 d-flex flex-column justify-content-center align-items-center"><h1 class="alert--win w-100 text-center">Game Result:<br><span>Tie!</h1></span><button onclick="slideTargets()" class="btn btn-move-preview">New Game</button></div>
     `, true)
     } else {
         player = player.toUpperCase();
 
         setModalContent(`
-        <div class="w-100 mt-3 d-flex flex-column justify-content-center align-items-center"><h1 class="alert--win w-100 text-center">Game Result:<br><span>${player} wins!</h1></span><br><h2 class="m-2 text-center d-flex justify-content-center align-items-center">${points}</h2><button onclick="resetAndHide()" class="btn btn-move-preview">New Game</button><br><p class="w-100 m-4 text-center text-muted">Not much more to see right now!</p></div>
+        <div class="w-100 mt-3 d-flex flex-column justify-content-center align-items-center"><h1 class="alert--win w-100 text-center">Game Result:<br><span>${player} wins!</h1></span><br><h2 class="m-2 text-center d-flex justify-content-center align-items-center">${points}</h2><button onclick="slideTargets()" class="btn btn-move-preview">New Game</button><br><p class="w-100 m-4 text-center text-muted">Not much more to see right now!</p></div>
 
     `, true)
     }

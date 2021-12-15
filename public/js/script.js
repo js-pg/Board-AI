@@ -163,3 +163,6 @@ const slideTargets = () => {
     }, 500);
 };
 
+const inputModalPlaceholder = () => {
+    setModalContent('<div class="w-100 mt-3 d-flex flex-column justify-content-center align-items-center"><p class="w-100 m-4 text-center text-muted">Not much to see right now!</p></div>', false);
+};

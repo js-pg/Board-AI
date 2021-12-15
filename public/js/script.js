@@ -125,3 +125,23 @@ function changeSvg() {
 }
 
 changeSvg();
+
+
+const setModalContent = (contentType, checkIfOpen) => {
+
+    //check if modal is already open
+    if (document.querySelector('.modal-slide').classList.contains('modal-slide-active') && checkIfOpen) {
+        changeSvg();
+    }
+
+    document.querySelector('.modal-content').innerHTML = contentType;
+};
+
+const resetAndHide = () => {
+    document.querySelector('.modal-slide').classList.toggle('modal-slide-active');
+    document.querySelector('.block').classList.toggle('block-active');
+    resetGame();
+    setTimeout(() => {
+        setModalContent('', false);
+    }, 800);
+};

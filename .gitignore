@@ -64,3 +64,6 @@ node_modules/
 
 # dotenv environment variables file
 .env
+
+#tailwindcss command 
+npx tailwindcss -i ./src/input.css -o ./public/css/output.css --watch

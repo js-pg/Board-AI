@@ -1,5 +1,24 @@
 {
   "dependencies": {
-    "firebase": "^9.6.1"
-  }
+    "firebase": "^9.6.1",
+    "tailwindcss": "^3.0.5"
+  },
+  "name": "board-ai",
+  "version": "1.0.0",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/js-pg/Board-AI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/js-pg/Board-AI/issues"
+  },
+  "homepage": "https://github.com/js-pg/Board-AI#readme",
+  "description": ""
 }
